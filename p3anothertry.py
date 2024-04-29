@@ -46,7 +46,7 @@ def load_images(root_dir, label):
 
 
 # Define the directories for dog and cat images
-root_dir = "/home/harshit/Desktop/c and java and python programming/python/ai_ml practise/ml/internship/train"
+root_dir = "path/to/train"
 dog_dir = os.path.join(root_dir, "dog")
 cat_dir = os.path.join(root_dir, "cat")
 
@@ -140,7 +140,7 @@ except Exception as e:
     print(f"Error saving model: {e}")
 
 # Path to the test folder containing images of dogs and cats
-test_folder = "/media/harshit/HG_DISK/ml project/dogs-vs-cats/test1/test1"
+test_folder = "/path/to/test1"
 
 # Initialize lists to store image names and predictions
 image_names = []
@@ -171,7 +171,7 @@ for filename in os.listdir(test_folder):
 df = pd.DataFrame({'Image_Name': image_names, 'Prediction': predictions})
 
 # Save the DataFrame to a CSV file
-csv_filename = '/home/harshit/Desktop/predictions.csv'
+csv_filename = 'predictions.csv'
 df.to_csv(csv_filename, index=False)
 
 print("Predictions saved to:", csv_filename)
